@@ -13,7 +13,7 @@ COPY go.sum go.sum
 RUN go mod download
 
 # Copy the go source
-COPY fileuploader .
+COPY . .
 
 # Install upx
 RUN sed -i "s/deb.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list.d/* \
